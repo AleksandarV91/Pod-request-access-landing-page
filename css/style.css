@@ -1,0 +1,438 @@
+/* Universal Styles */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --body-font: 'Chivo', sans-serif;
+    --green: #54E6AF;
+    --dark-blue: #121725;
+    --darkish-blue: #2C344B;
+    --white: #FFFFFF;
+    --light-blue: #5A668A;
+    --very-light-blue: #C2CBE5;
+    font-size: 18px;
+    background-color: var(--dark-blue);
+    color: var(--very-light-blue);
+    font-family: var(--body-font);
+    font-weight: 300;
+    min-width: 350px;
+}
+
+/* ---- Mobile Flow ----- */
+
+.errorMsg{
+    display: none;
+}
+
+.desktop{
+    display: none;
+}
+
+.tablet{
+    display: none;
+}
+
+.pattern{
+    display: none;
+}
+
+.mobile{
+    position: absolute;
+}
+
+.mobile img{
+    width: 100%;
+    height: auto;
+    opacity: 0.1;
+}
+
+/* Container */
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 55px 25px;
+}
+
+/* Logo */
+
+.logo img{
+    width: 134.85px;
+    height: 56px;
+    margin-bottom: 40px;
+}
+
+/* Content */
+
+.content h1{
+    font-size: 26px;
+    line-height: 38px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 35px;
+}
+
+.hightlight{
+    color: var(--green);
+}
+
+.content p{
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+/* Email and Icons */
+
+.email-icons{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    width: 327px;
+    height: 46px;
+    border-radius: 28px;
+    padding: 20px;
+    border: none;
+    background-color: var(--darkish-blue);
+    color: var(--very-light-blue);
+    margin-bottom: 20px;
+}
+
+input::placeholder{
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 700;
+}
+
+button{
+    width: 327px;
+    height: 46px;
+    background-color: var(--green);
+    color: var(--dark-blue);
+    border-radius: 28px;
+    border: none;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 700;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.spotify img, .apple-podcast img{
+    width: 55px;
+    height: 17px;
+}
+
+.google-podcast img{
+    width: 73px;
+    height: 11px;
+}
+
+.pocket-podcast img{
+    width: 77px;
+    height: 15px;
+}
+
+.spotify, .apple-podcast, .google-podcast{
+    margin-right: 20px;
+}
+
+/* --- Tablet Flow --- */
+
+@media screen and (min-width:481px) and (max-width:1020px) {
+    
+    .mobile{
+        display: none;
+    }
+
+    .tablet{
+        display: flex;
+        right: 0px;
+        position: absolute;
+    }
+
+    .tablet img{
+        width: 491px;
+        height: 767px;
+    }
+
+    /* Container */
+
+    .container{
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+        padding-left: 40px;
+    }
+
+    /* Logo */
+
+    .logo{
+        display: flex;
+        justify-content: left;
+        margin-bottom: 107px;
+    }
+
+    /* Content */
+
+    .content{
+        background-color: var(--dark-blue);
+        width: 635px;
+        height: 509px;
+        padding: 100px 0 0 0;
+    }
+
+    .content h1{
+        font-size: 48px;
+        line-height: 56px;
+        margin-bottom: 35px;
+    }
+
+    .content p{
+        font-size: 18px;
+        line-height: 28px;
+        padding-right: 200px;
+        margin-bottom: 45px;
+    }
+
+
+    /* Email and Icons */
+
+    .email-icons{
+        display: flex;
+        flex-direction: column;
+    }
+
+    form{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-bottom: 35px;
+    }
+
+    input{
+        width: 427px;
+        height: 56px;
+    }
+
+    button{
+        position: absolute;
+        width: 162px;
+        height: 46px;
+        left: 302px;
+        bottom: 136px;
+    }
+
+    .icons{
+        align-self: flex-start;
+    }
+
+    .spotify img{
+        width: 96px;
+        height: 29px;
+    }
+
+    .apple-podcast img{
+        width: 78px;
+        height: 29px;
+    }
+
+    .google-podcast img{
+        width: 125px;
+        height: 18px;
+    }
+
+    .pocket-podcast img{
+        width: 129px;
+        height: 26px;
+    }
+
+    .spotify, .apple-podcast, .google-podcast{
+        margin-right: 40px;
+    }
+
+    /* Pattern */
+
+    .pattern{
+        display: block;
+        position: relative;
+        bottom: -115px;
+    }
+}
+
+/* --- Desktop Flow --- */
+
+@media screen and (min-width:1024px) {
+    
+    .tablet{
+        display: none;
+    }
+
+    .mobile{
+        display: none;
+    }
+
+    .desktop{
+        display: block;
+        position: absolute;
+        right: 0;
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    .desktop img{
+        width: 888px;
+        height: 640px;
+    }
+
+    /* Container */
+
+    .container{
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+        padding-left: 250px;
+    }
+
+    /* Logo */
+
+    .logo{
+        display: flex;
+        justify-content: left;
+        padding-top: 15px;
+        margin-bottom: 50px;
+    }
+
+    /* Content */
+
+    .content{
+        background-color: var(--dark-blue);
+        width: 723px;
+        height: 509px;
+        padding: 60px 0 0 0;
+    }
+
+    .content h1{
+        font-size: 52px;
+        line-height: 62px;
+        margin-bottom: 35px;
+    }
+
+    .content p{
+        font-size: 18px;
+        line-height: 28px;
+        padding-right: 275px;
+        margin-bottom: 45px;
+    }
+
+    /* Email and Icons */
+
+    .errorMsg{
+        display: none;
+        position: relative;
+        font-size: 12px;
+        font-weight: 700;
+        color: #FB3E3E;
+        left: 20px;
+        top: -10px;
+    }
+
+    span.showError{
+        display: block;
+    }
+
+
+    .email-icons{
+        display: flex;
+        flex-direction: column;
+    }
+
+    form{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-bottom: 35px;
+    }
+
+    input{
+        width: 427px;
+        height: 56px;
+    }
+
+    button{
+        display: block;
+        position: absolute;
+        width: 162px;
+        height: 46px;
+        left: 510px;
+        bottom: 165px;
+    }
+
+    button:hover{
+        background-color: #B3FFE2;
+        cursor: pointer;
+    }
+
+    .icons{
+        align-self: flex-start;
+    }
+
+    .spotify img{
+        width: 96px;
+        height: 29px;
+    }
+
+    .apple-podcast img{
+        width: 78px;
+        height: 29px;
+    }
+
+    .google-podcast img{
+        width: 125px;
+        height: 18px;
+    }
+
+    .pocket-podcast img{
+        width: 129px;
+        height: 26px;
+    }
+
+    .spotify, .apple-podcast, .google-podcast{
+        margin-right: 50px;
+    }
+
+    /* Pattern */
+
+    .pattern{
+        display: block;
+        position: absolute;
+        left: 1287px;
+        bottom: 10px;
+    }
+}
