@@ -1,17 +1,19 @@
-const form = document.querySelector("form");
-const input = document.querySelector(".submitDocs");
-const spanErr = document.querySelector(".errorMsg");
-console.log(spanErr);
+const emailInput = document.querySelector(".submitDocs");
+const btn = document.querySelector(".btn");
+const err = document.querySelector(".error-msg");
 
-input.addEventListener("invalid", () => {
-    spanErr.classList.add("showError")
-})
-input.addEventListener("input", () => {
-    spanErr.classList.remove("showError")
-})
-form.addEventListener("submit", (evt) => {
-    console.log(evt)
-    evt.preventDefault()
-     alert("Your form has been submitted, Thank you")
-     input.value = ""
-})
+btn.addEventListener("click", () => {
+  const emailValue = emailInput.value.trim();
+  if (emailValue === "" || !emailValidation(emailValue)) {
+    err.classList.add("show");
+  } else {
+    err.classList.remove("show");
+    emailInput.value = "";
+  }
+});
+
+const emailValidation = (email) => {
+  let regEx =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return regEx.test(String(email).toLocaleLowerCase());
+};

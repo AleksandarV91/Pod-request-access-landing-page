@@ -1,66 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.css" type="text/css">
-  <title>Frontend Mentor | Pod request access landing page</title>
-</head>
-<body>
-  <main>
-    <div class="bg">
-      <div class="desktop">
-        <img src="./assets/desktop/image-host.jpg" alt="">
-      </div>
-      <div class="tablet">
-        <img src="./assets/tablet/image-host.jpg" alt="">
-      </div>
-      <div class="mobile">
-        <img src="./assets/mobile/image-host.jpg" alt="">
-      </div>
-    </div>
-    <div class="container">
-      <div class="logo">
-        <img src="./assets/desktop/logo.svg" alt="">
-      </div>
-      <div class="content">
-        <h1><span class="hightlight">Publish your podcasts </span><br>everywhere.</h1>
-        <p>Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
-        Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
-        <div class="email-icons">
-          <div class="email">
-            <form>
-              <label>
-                <input type="email" name="email" class="submitDocs" required placeholder="Email address">
-                <span class="errorMsg showError">Oops! Please check your email</span>
-              </label>
-              <button type="submit" onclick="/js/checkMail.js">Request access</button>
-            </form>
-          </div>
-          <div class="icons">
-            <div class="spotify">
-              <img src="./assets/desktop/spotify.svg" alt="">
-            </div>
-            <div class="apple-podcast">
-              <img src="./assets/desktop/apple-podcast.svg" alt="">
-            </div>
-            <div class="google-podcast">
-              <img src="./assets/desktop/google-podcasts.svg" alt="">
-            </div>
-            <div class="pocket-podcast">
-              <img src="./assets/desktop/pocket-casts.svg" alt="">
-            </div>
-          </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <title>Frontend Mentor | Pod request access landing page</title>
+  </head>
+  <body>
+    <main>
+      <div class="bg">
+        <div class="desktop">
+          <img src="./assets/desktop/image-host.jpg" alt="" />
         </div>
-        <footer class="pattern">
-          <img src="./assets/desktop/bg-pattern-dots.svg" alt="">
-        </footer>
+        <div class="tablet">
+          <img src="./assets/tablet/image-host.jpg" alt="" />
+        </div>
+        <div class="mobile">
+          <img src="./assets/mobile/image-host.jpg" alt="" />
+        </div>
       </div>
-    </div>
-  </main>
-  <script src="./js/checkMail.js"></script>
-</body>
+      <div class="container">
+        <div class="logo">
+          <img src="./assets/desktop/logo.svg" alt="" />
+        </div>
+        <div class="content">
+          <h1>
+            <span class="hightlight">Publish your podcasts </span
+            ><br />everywhere.
+          </h1>
+          <p>
+            Upload your audio to Pod with a single click. We’ll then distribute
+            your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket
+            Casts and more!
+          </p>
+          <div class="email-icons">
+            <div class="email">
+              <form>
+                <label>
+                  <input
+                    type="email"
+                    name="email"
+                    class="submitDocs"
+                    required
+                    placeholder="Email address"
+                  />
+                  <p class="error-msg">Oops! Please check your email</p>
+                </label>
+                <button type="submit" class="btn">Request access</button>
+              </form>
+            </div>
+            <div class="icons">
+              <div class="spotify">
+                <img src="./assets/desktop/spotify.svg" alt="" />
+              </div>
+              <div class="apple-podcast">
+                <img src="./assets/desktop/apple-podcast.svg" alt="" />
+              </div>
+              <div class="google-podcast">
+                <img src="./assets/desktop/google-podcasts.svg" alt="" />
+              </div>
+              <div class="pocket-podcast">
+                <img src="./assets/desktop/pocket-casts.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <footer class="pattern">
+            <img src="./assets/desktop/bg-pattern-dots.svg" alt="" />
+          </footer>
+        </div>
+      </div>
+    </main>
+    <script src="./js/checkMail.js"></script>
+  </body>
 </html>
